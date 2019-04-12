@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆环二</title>
+    <!-- <link rel="stylesheet" href="./css/softRest.css"> -->
+</head>
+<body>
+    <!-- x轴半径、y轴半径、弧形旋转（度数）、角度大小（0表示小于180,1表示大于）、弧线方向（0表示逆时针，1表示顺时针）、弧线终点x、弧线终点y -->
+<svg width="400" height="400">
+    <!-- <path d="M 110 10 a 100 100 0 0 1 0 200 a 100 100 0 0 1 0 -200 Z" fill="none" stroke="#FD7991" stroke-width="4" -->
+    <path d="M 110 10 a 100 100 0 0 1 -50 200" fill="none" stroke="#FD7991" stroke-width="4"
+
+        stroke-linecap="round" stroke-dasharray="628.4073486328125">
+        <!-- <animate attributeName="stroke-dashoffset" from="628.4073486328125" to="0" dur="5s" repeatCount="indefinite" /> -->
+    </path>
+<defs>
+    <radialGradient cx="50%" cy="50%" fx="50%" fy="50%" r="60%" id="tail">
+        <stop stop-opacity="1" stop-color="#FD7991" offset="30%" />
+        <stop stop-opacity="0.5" stop-color="#fD97AA" offset="40%" />
+        <stop stop-opacity="0" stop-color="#FECBD4" offset="80%" />
+    </radialGradient>
+</defs>
+<g>
+    <rect x="-10" y="-10" width="20" height="20" fill="url(#tail)">
+        <animateMotion path="M 110 10 a 100 100 0 0 1 -50 200" rotate="auto" dur="5s" fill="freeze" repeatCount="indefinite" />
+    </rect>
+</g>
+</svg>
+</body>
+</html>
+<script>
+    
+</script>
